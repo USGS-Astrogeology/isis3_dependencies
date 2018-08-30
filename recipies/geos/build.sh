@@ -2,6 +2,8 @@
 
 mv $SRC_DIR/README.md $SRC_DIR/README
 
+sed -i '/-ansi/d' configure.ac
+
 if [ ! -f configure ]; then
   autoreconf -i --force
 fi
@@ -23,7 +25,6 @@ if [ $(uname) == Darwin ]; then
   export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
   export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
 fi
-
 
 ./configure --prefix=$PREFIX
 
