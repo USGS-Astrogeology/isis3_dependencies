@@ -13,7 +13,7 @@ make install
 if [ $(uname) == "Linux" ]; then
   echo "================================="
   echo "Linux shared object being created..."
-  gcc -shared -o libnn.so -L${PREFIX}/lib -lnn
+  gcc -shared -o libnn.so *.o -L${PREFIX}/lib -lnn
   cp libnn.so ${PREFIX}/lib
 fi
 
