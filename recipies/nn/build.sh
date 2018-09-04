@@ -18,6 +18,6 @@ if [ $(uname) == "Linux" ]; then
 fi
 
 if [ $(uname) == "Darwin" ]; then
-  clang -dynamiclib -o libnn.dylib -L${PREFIX}/lib -lnn
+  clang -dynamiclib -o libnn.dylib *.o -L${PREFIX}/lib -lnn
   cp libnn.dylib ${PREFIX}/lib
 fi
