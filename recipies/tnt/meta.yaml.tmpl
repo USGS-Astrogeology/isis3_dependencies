@@ -6,7 +6,8 @@ package:
 source:
   fn: tnt_{{ package_versions.bullet }}.zip
   url: http://math.nist.gov/tnt/tnt_{{ package_versions.tnt }}.zip
-
+  patches:
+    - 0001_tnt_macOS_10.13.patch
 
 about:
   home:  http://math.nist.gov/tnt/
