@@ -1,7 +1,0 @@
-package:
-  name: nn
-  version: 1.86.0
-
-source:
-  url: https://github.com/sakov/nn-c/archive/master.zip
-
