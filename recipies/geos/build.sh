@@ -2,8 +2,6 @@
 
 mv $SRC_DIR/README.md $SRC_DIR/README
 
-sed -i '/-ansi/d' configure.ac
-
 if [ ! -f configure ]; then
   autoreconf -i --force
 fi
